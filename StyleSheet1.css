@@ -1,0 +1,517 @@
+﻿
+css
+/* Base Styles & Variables */
+:root {
+    --primary: #e83f6f; /* Cancer ribbon pink/red */
+    --primary-light: #ff7b9c;
+    --primary-dark: #c71f4f;
+    --secondary: #2274a5; /* Trust-building blue */
+    --accent: #ffbf00; /* Gold/yellow for highlights */
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --success: #28a745;
+    --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+
+### Header Styles
+
+```css
+/* Header Styles */
+.charity-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.charity-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.charity-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.ribbon-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.cta-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+    .cta-button:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+```
+
+### Donation Form Styles
+
+```css
+/* Donation Section */
+.donation-section {
+    padding: 80px 0;
+}
+
+.donation-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .donation-card h2 {
+        color: var(--primary);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+.subheading {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.donation-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.amount-btn {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+    .amount-btn:hover, .amount-btn.active {
+        background: var(--primary);
+        color: white;
+    }
+
+.custom-amount-group {
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.custom-amount {
+    width: 100%;
+    padding: 15px 15px 15px 35px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+    .custom-amount:focus {
+        outline: none;
+        border-color: var(--primary);
+    }
+
+.donor-info {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+.donate-btn {
+    background: var(--primary);
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+    .donate-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(232, 63, 111, 0.4);
+    }
+
+.security-note {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+```
+
+### Impact Section Styles
+
+```css
+/* Impact Section */
+.impact-section {
+    padding: 80px 0;
+    background-color: var(--secondary);
+    color: white;
+    text-align: center;
+}
+
+.impact-section h2 {
+    margin-bottom: 15px;
+}
+
+.section-description {
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.impact-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+```
+
+### Testimonials Section Styles
+
+```css
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+    .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--primary);
+        opacity: 0.2;
+        font-family: serif;
+        line-height: 1;
+    }
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+```
+
+### Footer Styles
+
+```css
+/* Footer */
+.charity-footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 60px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.footer-about p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+    .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+    }
+
+.footer-contact p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+    .footer-bottom p:first-child {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom a {
+        color: white;
+        margin: 0 10px;
+    }
+
+```
+
+### Responsive Styles
+
+```css
+/* Responsive Design */
+@media (max-width: 768px) {
+    .charity-header h1
+
+{
+    font-size: 2.2rem;
+}
+
+.charity-header p {
+    font-size: 1rem;
+}
+
+.donation-card {
+    padding: 30px 20px;
+}
+
+.amount-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+}
+
+}
+
+@media (max-width: 480px) {
+    .charity-header {
+        padding: 60px 0;
+    }
+
+        .charity-header h1 {
+            font-size: 1.8rem;
+        }
+
+    .donation-amounts {
+        gap: 10px;
+    }
+
+    .impact-stats {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+```
+
+}
